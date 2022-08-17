@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Button} from "@material-ui/core";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import { makeStyles } from "@material-ui/core/styles";
-import {PrimaryMain, PrimaryBorder} from "@xyz/tokens";
+import {OpsElement1, OpsElement2} from "@baysidepoc/tokens";
 
 export const Boton = (props) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -12,7 +12,7 @@ export const Boton = (props) => {
   const customStyle2 = useStyles2();
 
   //console.log("NPM COLORS -> ",Colors);
-  console.log("NPM ActionMain -> ",PrimaryMain);
+  console.log("NPM ActionMain -> ",OpsElement1);
  
 
   const {
@@ -85,9 +85,9 @@ const useStyles2 = makeStyles(({ palette, ...theme }) => console.log(palette));
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   buttonStyle: {
     //color:'#FF0000',
-    border: `1px solid ${PrimaryBorder}`,
+    border: `1px solid ${OpsElement2}`,
     //boxShadow: theme.shadows[8],
-    color: PrimaryMain,
+    color: OpsElement1,
     "&:hover": {
       width: "var(--sidenav-width)",
       "& .sidenavHoverShow": {
