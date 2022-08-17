@@ -5,7 +5,7 @@ import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import { makeStyles } from "@material-ui/core/styles";
 import {OpsElement1, OpsElement2} from "@baysidepoc/tokens";
 
-export const Boton = (props) => {
+export const Buttonz = (props) => {
   const [isLoading, setIsLoading] = useState(true);
 
   const customStyle = useStyles();
@@ -110,7 +110,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
   },
 }));
 
-Boton.propTypes = {
+Buttonz.propTypes = {
   /**
    * Type of Button
    */
@@ -129,6 +129,6 @@ Boton.propTypes = {
    */
 };
 
-Boton.defaultProps = {
+Buttonz.defaultProps = {
   compact: false,
 };

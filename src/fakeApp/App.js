@@ -1,31 +1,8 @@
 import React from "react";
 import { Button } from "@material-ui/core";
-import { Boton } from "../components/boton/Boton";
+import { Buttonz } from "../wrapped/buttonz/buttonz";
+import { Alertz } from "../wrapped/alertz";
 import ThemeWrapper from "../themes/ThemeWrapper";
-
-const App1 = () => {
-  return (
-    <div>
-      123ABC
-      <h2>Hello I'm the App1</h2>
-        <Button variant="outlined">
-          Hello Friends1
-        </Button>
-
-        <Boton
-          type="primary"
-          variant="outlined"
-          buttonContent="Hello Friends"
-          primary={true}
-          backgroundColor="beige"
-          compact={true}
-          size="small"
-          label="Hola Amigos"
-        />
-      
-    </div>
-  );
-};
 
 
 const App = () => {
@@ -38,7 +15,7 @@ const App = () => {
           Hello Friends
         </Button>
 
-        <Boton
+        <Buttonz
           type="primary"
           variant="outlined"
           buttonContent="Hello Friends"
@@ -48,6 +25,12 @@ const App = () => {
           size="small"
           label="Hola Amigos"
         />
+
+        <Alertz
+          severity="error"
+          content="qwerty"
+        />
+
       </ThemeWrapper>
     </div>
   );
