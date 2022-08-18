@@ -23,50 +23,55 @@ export const themeColors = {
       type: "light",
       //These are colors, not Button Props
       primary: {
-        //GREEN 600 #7DB534
-        main: "#7DB534",
+        main: "#002dd9",
         contrastText: textLight.primary,
       },
       secondary: {
-        main: "#7DB534",
+        main: "#002dd9",
         contrastText: textLight.primary,
       },
       error: errorColor,
       text: textLight,
+      background: {
+        paper: "#f5f5f5",
+        default: "#262628",
+      },
     },
   },
   darkTheme: {
     palette: {
       type: "dark",
       primary: {
-        main: "#7DB534",
+        main: "#ffffff",
         contrastText: "#ffffff",
       },
       secondary: {
-        main: "#7DB534",
+        main: "#ffffff",
         contrastText: textLight.primary,
       },
       error: errorColor,
       background: {
-        paper: "#040A14",
+        paper: "#0B0B0B",
         default: "#CCC",
       },
     },
   },
   contrastTheme: {
     palette: {
-      type: "light",
+      type: "dark",
       primary: {
-        //PURPLE400 #6967EE
-        main: "#6967EE",
+        main: "#C1DEF6",
         contrastText: textLight.primary,
       },
       secondary: {
-        //PURPLE400 #6967EE
-        main: "#6967EE",
+        main: "#C1DEF6",
         contrastText: textLight.primary,
       },
       text: textLight,
+      background: {
+        paper: "#333E5E",
+        default: "#CCC",
+      },
     },
   },
 };
