@@ -2,7 +2,7 @@ import React from "react";
 import { BoxWrapper } from "./Box2";
 
 export default {
-  title: "Agents/Box",
+  title: "Agents/Dinosaur",
   component: BoxWrapper,
   argTypes: {
     //backgroundColor: { control: "color" },
