@@ -2,7 +2,7 @@ import React from "react";
 import { Chipz } from "./chipz";
 
 export default {
-  title: "Components/Chipz",
+  title: "Molecules/Chipz",
   component: Chipz,
   argTypes: {
     //backgroundColor: { control: "color" },

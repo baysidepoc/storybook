@@ -1,15 +1,15 @@
 import React from "react";
-import { Buttonz } from "./buttonz";
+import { Custom1 } from "./Custom1";
 
 export default {
-  title: "Components/Buttonz",
-  component: Buttonz,
+  title: "Organisms/FAQ Page",
+  component: Custom1,
   argTypes: {
     //backgroundColor: { control: "color" },
   },
 };
 
-const Template = (args) => <Buttonz {...args} />;
+const Template = (args) => <Custom1 {...args} />;
 
 export const Regular = Template.bind({});
 Regular.args = {

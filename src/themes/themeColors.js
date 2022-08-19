@@ -60,14 +60,14 @@ export const themeColors = {
     palette: {
       type: "dark",
       primary: {
-        main: "#C1DEF6",
-        contrastText: textLight.primary,
+        main: "#ffffff",
+        contrastText: "#ffffff",
       },
       secondary: {
-        main: "#C1DEF6",
+        main: "#ffffff",
         contrastText: textLight.primary,
       },
-      text: textLight,
+      error: errorColor,
       background: {
         paper: "#333E5E",
         default: "#CCC",

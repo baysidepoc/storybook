@@ -1,37 +1,81 @@
 import React from "react";
 import { Button } from "@material-ui/core";
-import { Buttonz } from "../wrapped/buttonz/buttonz";
-import { Alertz } from "../wrapped/alertz";
+import { Buttonz } from "../molecules/buttonz/buttonz";
+import { Chipz } from "../molecules/chipz/chipz";
+
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import Typography from '@material-ui/core/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
 import ThemeWrapper from "../themes/ThemeWrapper";
 
 
 const App = () => {
   return (
     <div>
-      123
-      <ThemeWrapper toggle={true}>
-        <h2>Hello I'm the App2</h2>
-        <Button variant="outlined">
-          Hello Friends
-        </Button>
-
-        <Buttonz
-          type="primary"
-          variant="outlined"
-          buttonContent="Hello Friends"
-          primary={true}
-          backgroundColor="beige"
-          compact={true}
-          size="small"
-          label="Hola Amigos"
-        />
-
-        <Alertz
+    <ThemeWrapper toggle={true}>
+    <div>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>Accordion 1</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+            sit amet blandit leo lobortis eget.
+          </Typography>
+          <Buttonz
+            type="primary"
+            variant="outlined"
+            buttonContent="Hello Friends"
+            primary={true}
+            backgroundColor="beige"
+            compact={true}
+            size="small"
+            label="Hola Amigos"
+          />
+          <Chipz
           severity="error"
           content="qwerty"
-        />
-
-      </ThemeWrapper>
+          />
+          <Button variant="outlined">
+          Hello Friends
+        </Button>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2a-content"
+          id="panel2a-header"
+        >
+          <Typography >Accordion 2</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+            sit amet blandit leo lobortis eget.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion disabled>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel3a-content"
+          id="panel3a-header"
+        >
+          <Typography >Disabled Accordion</Typography>
+        </AccordionSummary>
+      </Accordion>
+      
+    </div>
+    </ThemeWrapper>
     </div>
   );
 };

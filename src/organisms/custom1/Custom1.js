@@ -1,18 +1,28 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Button} from "@material-ui/core";
+
+// import { Chipz } from "../wrapped/chipz/chipz";
+import { Chipz } from "../../molecules/chipz/chipz";
+
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import Typography from '@material-ui/core/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import { makeStyles } from "@material-ui/core/styles";
-import {OpsElement1, OpsElement2} from "@baysidepoc/tokens";
+import {OpsAction1Default, OpsAction2Default} from "@baysidepoc/tokens";
 
-export const Buttonz = (props) => {
+export const Custom1 = (props) => {
   const [isLoading, setIsLoading] = useState(true);
 
   const customStyle = useStyles();
   const customStyle2 = useStyles2();
 
   //console.log("NPM COLORS -> ",Colors);
-  console.log("NPM ActionMain -> ",OpsElement1);
+  console.log("NPM ActionMain -> ",OpsAction1Default);
  
 
   const {
@@ -30,6 +40,7 @@ export const Buttonz = (props) => {
     //custom props
     type,
     compact,
+    semantic
   } = props;
 
   let variant;
@@ -48,6 +59,9 @@ export const Buttonz = (props) => {
     //addStyle = { color: "white" };
   }
   //Semantic:  info, good, bad, warn, disabled
+
+
+
   //Compact: bool
 
   let buttonSize;
@@ -61,21 +75,55 @@ export const Buttonz = (props) => {
   //Theme: clear, dark, accessible
 
   return (
-    <Button
-      id={id}
-      size={buttonSize}
-      variant={variant}
-      startIcon={<CheckCircleIcon />}
-      color={"secondary"}
-      onClick={onClick}
-      classes={classes}
-      disabled={isDisabled}
-      //className={`atom-component__button ${buttonType}`}
-      className={customStyle.buttonStyle}
-      style={addStyle}
-    >
-      {buttonContent}
-    </Button>
+    <div>
+    <Accordion>
+      <AccordionSummary
+        expandIcon={<ExpandMoreIcon />}
+        aria-controls="panel1a-content"
+        id="panel1a-header"
+      >
+        <Typography>Accordion 1</Typography>
+      </AccordionSummary>
+      <AccordionDetails>
+        <Typography>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+          sit amet blandit leo lobortis eget.
+        </Typography>
+        <Chipz
+        severity="error"
+        content="qwerty"
+        />
+        <Button variant="outlined">
+        Hello Friends
+      </Button>
+      </AccordionDetails>
+    </Accordion>
+    <Accordion>
+      <AccordionSummary
+        expandIcon={<ExpandMoreIcon />}
+        aria-controls="panel2a-content"
+        id="panel2a-header"
+      >
+        <Typography >Accordion 2</Typography>
+      </AccordionSummary>
+      <AccordionDetails>
+        <Typography>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+          sit amet blandit leo lobortis eget.
+        </Typography>
+      </AccordionDetails>
+    </Accordion>
+    <Accordion disabled>
+      <AccordionSummary
+        expandIcon={<ExpandMoreIcon />}
+        aria-controls="panel3a-content"
+        id="panel3a-header"
+      >
+        <Typography >Disabled Accordion</Typography>
+      </AccordionSummary>
+    </Accordion>
+    
+  </div>
   );
 };
 
@@ -85,9 +133,9 @@ const useStyles2 = makeStyles(({ palette, ...theme }) => console.log(palette));
 const useStyles = makeStyles(({ palette, ...theme }) => ({
   buttonStyle: {
     //color:'#FF0000',
-    border: `1px solid ${OpsElement2}`,
+    border: `1px solid ${OpsAction2Default}`,
     //boxShadow: theme.shadows[8],
-    color: OpsElement1,
+    color: OpsAction1Default,
     "&:hover": {
       width: "var(--sidenav-width)",
       "& .sidenavHoverShow": {
@@ -110,7 +158,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
   },
 }));
 
-Buttonz.propTypes = {
+Custom1.propTypes = {
   /**
    * Type of Button
    */
@@ -129,6 +177,6 @@ Buttonz.propTypes = {
    */
 };
 
-Buttonz.defaultProps = {
+Custom1.defaultProps = {
   compact: false,
 };

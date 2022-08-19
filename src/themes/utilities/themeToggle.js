@@ -11,7 +11,7 @@ const ToggleTheme =({selected, update, background})=> {
 
   return (
     <>
-      {background && <Card style={{position:'absolute', top:'0', left:'0', width:'100%', height:'100%'}}/>}
+      {/* {background && <Card style={{position:'absolute', top:'0', left:'0', width:'100%', height:'100%'}}/>} */}
       
       <Card style={{position:'fixed', top:'10px', right:'10px', zIndex:'2'}}>
         <ToggleButtonGroup
